@@ -1,0 +1,2 @@
+You can loop through the list items by using a while loop.
+Use the len() function to determine the length of the tuple, then start at 0 and loop your way through the tuple items by refering to their indexes.
