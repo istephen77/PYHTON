@@ -90,56 +90,56 @@
 # aya.mobile_purchase()
 # print(aya.charger)
 
-Class methods - doesn't need self as an argument but they do need a parameter called "cls" and this stands for class and like self gets automatically passed in by python
-if we want to access anything assigned in class variable then use class methods
-if we want to access anything assigned in instance variable then use instance methods
-if we  do not want to access anything assigned in class variable or instance variable then use static methods
-class mobile:
-    charger = "Yes"
-
-    def __init__(self,name,color):
-        self.name = name
-        self.color = color
-
-    def mobile_puchase(self):
-        print(f"Thanks for purchasing {self.name} with {self.color} color !")
-
-    @classmethod                   #Can be accessed without the object by using a decorator "@classmethod above the class method. Can be accessed by using an object. Good in terms of memory management as there is no need to create an object
-    def verification(cls):
-        print("Charger is Available ? ",cls.charger)
-
-mobile.verification()  #class method accesed without using an object
-stephin = mobile("Samsung","Black")
-stephin.mobile_puchase()
-stephin.verification()  # #class method accesed with using an object
-
-
-Static methods - takes neither a self nor a cls parameter but it's free to accept any arbitary number of other parameters. Helpful to access other class objects
-
-class mobile:
-    charger = "Yes"
-
-    def __init__(self,name,color):
-        self.name = name
-        self.color = color
-
-    def mobile_puchase(self):
-        print(f"Thanks for purchasing {self.name} with {self.color} color !")
-
-    @classmethod                   #Can be accessed without the object by using a decorator "@classmethod above the class method. Can be accessed by using an object. Good in terms of memory management as there is no need to create an object
-    def verification(cls):
-        print("Charger is Available ? ",cls.charger)
-
-    @staticmethod
-    def addition(a,b):
-        print("Result : ",a+b)
-
-mobile.verification()  #class method accesed without using an object
-stephin = mobile("Samsung","Black")
-stephin.mobile_puchase()
-mobile.addition(10,10)  #Static method is accessed using class and even an object
-stephin.addition(10,2)
-stephin.verification()  # #class method accesed with using an object
+# Class methods - doesn't need self as an argument but they do need a parameter called "cls" and this stands for class and like self gets automatically passed in by python
+# if we want to access anything assigned in class variable then use class methods
+# if we want to access anything assigned in instance variable then use instance methods
+# if we  do not want to access anything assigned in class variable or instance variable then use static methods
+# class mobile:
+#     charger = "Yes"
+#
+#     def __init__(self,name,color):
+#         self.name = name
+#         self.color = color
+#
+#     def mobile_puchase(self):
+#         print(f"Thanks for purchasing {self.name} with {self.color} color !")
+#
+#     @classmethod                   #Can be accessed without the object by using a decorator "@classmethod above the class method. Can be accessed by using an object. Good in terms of memory management as there is no need to create an object
+#     def verification(cls):
+#         print("Charger is Available ? ",cls.charger)
+#
+# mobile.verification()  #class method accesed without using an object
+# stephin = mobile("Samsung","Black")
+# stephin.mobile_puchase()
+# stephin.verification()  # #class method accesed with using an object
+#
+#
+# Static methods - takes neither a self nor a cls parameter but it's free to accept any arbitary number of other parameters. Helpful to access other class objects
+#
+# class mobile:
+#     charger = "Yes"
+#
+#     def __init__(self,name,color):
+#         self.name = name
+#         self.color = color
+#
+#     def mobile_puchase(self):
+#         print(f"Thanks for purchasing {self.name} with {self.color} color !")
+#
+#     @classmethod                   #Can be accessed without the object by using a decorator "@classmethod above the class method. Can be accessed by using an object. Good in terms of memory management as there is no need to create an object
+#     def verification(cls):
+#         print("Charger is Available ? ",cls.charger)
+#
+#     @staticmethod
+#     def addition(a,b):
+#         print("Result : ",a+b)
+#
+# mobile.verification()  #class method accesed without using an object
+# stephin = mobile("Samsung","Black")
+# stephin.mobile_puchase()
+# mobile.addition(10,10)  #Static method is accessed using class and even an object
+# stephin.addition(10,2)
+# stephin.verification()  # #class method accesed with using an object
 
 
 
